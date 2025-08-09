@@ -33,3 +33,37 @@ void bucketSort(int arr[], int n) {
     }
 }
 
+int main() {
+    int n, i, choice;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements (0–9 for bucket sort):\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nChoose sorting method:\n");
+    printf("1. Bubble Sort\n");
+    printf("2. Bucket Sort\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        bubbleSort(arr, n);
+    } else if (choice == 2) {
+        bucketSort(arr, n);
+    } else {
+        printf("Invalid choice!\n");
+        return 0;
+    }
+
+    printf("\nSorted array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
