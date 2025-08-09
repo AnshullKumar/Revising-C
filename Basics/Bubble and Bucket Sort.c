@@ -16,3 +16,20 @@ void bubbleSort(int arr[], int n) {
     }
 }
 
+// Bucket Sort
+void bucketSort(int arr[], int n) {
+    int bucket[10] = {0};
+    int i, j = 0;
+
+    for (i = 0; i < n; i++) {
+        bucket[arr[i]]++;
+    }
+
+    for (i = 0; i < 10; i++) {
+        while (bucket[i] > 0) {
+            arr[j++] = i;
+            bucket[i]--;
+        }
+    }
+}
+
