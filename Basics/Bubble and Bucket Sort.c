@@ -33,6 +33,20 @@ void bucketSort(int arr[], int n) {
     }
 }
 
+// Quick Sort
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pivot = arr[high];
+        int i = low - 1;
+    }
+}
+    
+
 int main() {
     int n, i, choice;
 
@@ -48,6 +62,7 @@ int main() {
     printf("\nChoose sorting method:\n");
     printf("1. Bubble Sort\n");
     printf("2. Bucket Sort\n");
+    printf("3. Quick Sort\n");
     printf("Enter choice: ");
     scanf("%d", &choice);
 
@@ -55,7 +70,10 @@ int main() {
         bubbleSort(arr, n);
     } else if (choice == 2) {
         bucketSort(arr, n);
-    } else {
+    } else if (choice == 3) {
+        quickSort(arr, 0, n - 1);
+    }
+     else {
         printf("Invalid choice!\n");
         return 0;
     }
