@@ -1,4 +1,5 @@
 // Sparse matrix representation in C
+// it prints the non-zero elements of a matrix along with their indices
 
 
 
