@@ -32,10 +32,6 @@ It serves as a quick reference for students, interview preparation, and anyone l
 - Binary Search Tree (Insertion, Deletion, Searching)  
 - AVL Tree (Basics)  
 
-### 🔹 Graphs  
-- Representation (Adjacency Matrix, Adjacency List)  
-- BFS and DFS Traversals  
-
 ---
 
 ## 🎯 Purpose
