@@ -45,9 +45,11 @@ void display() {
         
     } else {
         printf("\nQueue elements (front to rear):\n");
+        printf("[");
         for (int i = front; i <= rear; i++) {  // Display from front to rear
-            printf("%d\n", queue[i]);
+            printf("%d ", queue[i]);
         }
+        printf("]");
     }
 }
 
