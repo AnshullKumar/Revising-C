@@ -42,10 +42,50 @@ void peek() {
 void display() {
     if (front == -1 || front > rear) {
         printf("\nQueue is empty.\n");
+        
     } else {
         printf("\nQueue elements (front to rear):\n");
         for (int i = front; i <= rear; i++) {  // Display from front to rear
             printf("%d\n", queue[i]);
         }
     }
+}
+
+int main() {
+    int choice, value;
+
+    while (1) {
+        printf("\n--- Queue Menu ---\n");
+        printf("1. Enqueue\n");
+        printf("2. Dequeue\n");
+        printf("3. Peek\n");
+        printf("4. Display\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter value to enqueue: ");
+                scanf("%d", &value);
+                enqueue(value);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                peek();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                printf("Exiting...\n");
+                return 0;
+            default:
+                printf("Invalid choice! Try again.\n");
+        }
+    }
+
+    return 0;
 }
