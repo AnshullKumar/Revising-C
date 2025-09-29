@@ -8,9 +8,9 @@ It serves as a quick reference for students, interview preparation, and anyone l
 ## 📌 Topics Covered  
 
 ### 🔹 Arrays  
-- Insertion & Deletion  
-- Searching (Linear, Binary)  
-- Sorting (Bubble, Insertion, Selection, Quick, Merge)  
+- Insertion & Deletion  ✔️
+- Searching (Linear, Binary) ✔️  
+- Sorting (Bubble ✔️, Insertion, Selection, Quick, Merge)  
 
 ### 🔹 Linked Lists  
 - Singly Linked List  
@@ -18,14 +18,13 @@ It serves as a quick reference for students, interview preparation, and anyone l
 - Circular Linked List  
 
 ### 🔹 Stacks  
-- Stack using Arrays  
+- Stack using Arrays ✔️  
 - Stack using Linked List  
 
 ### 🔹 Queues  
-- Linear Queue  
+- Linear Queue  ✔️
 - Circular Queue  
-- Deque  
-- Priority Queue  
+- Deque    
 
 ### 🔹 Trees  
 - Binary Tree (Traversals: Preorder, Inorder, Postorder)  
