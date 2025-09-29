@@ -55,6 +55,83 @@ int main() {
 
             printf("Element inserted!\n");
         }
+        else if (choice == 2) {  
+            if (n == 0) {
+                printf("Array is empty!\n");
+                continue;
+            }
+            printf("Enter position to delete (0 to %d): ", n - 1);
+            scanf("%d", &pos);
 
+            if (pos < 0 || pos >= n) {
+                printf("Invalid position!\n");
+                continue;
+            }
+
+            for (i = pos; i < n - 1; i++)
+                arr[i] = arr[i + 1];
+
+            n--;
+            arr = (int*) realloc(arr, n * sizeof(int));
+            printf("Element deleted!\n");
+        }
+
+        else if (choice == 3) {  
+            int method;
+            printf("Enter element to search: ");
+            scanf("%d", &key);
+
+            printf("Choose search method:\n1. Linear Search\n2. Binary Search\n");
+            scanf("%d", &method);
+
+            pos = -1;
+
+            if (method == 1) {     // Linear Search
+                for (i = 0; i < n; i++) {
+                    if (arr[i] == key) {
+                        pos = i;
+                        break;
+                    }
+                }
+            } else if (method == 2) {     // Binary Search
+                int l = 0, r = n - 1;
+                while (l <= r) {
+                    int mid = (l + r) / 2;
+                    if (arr[mid] == key) { pos = mid; break; }
+                    else if (arr[mid] < key) l = mid + 1;
+                    else r = mid - 1;
+                }
+            } else {
+                printf("Invalid method!\n");
+                continue;
+            }
+
+            if (pos != -1)
+                printf("Element found at position %d (index %d)\n", pos + 1, pos);
+            else
+                printf("Element not found!\n");
+        }
+
+        else if (choice == 4) {  // Display
+            if (n == 0) printf("Array is empty!\n");
+            else {
+                printf("Array: ");
+                for (i = 0; i < n; i++)
+                    printf("%d ", arr[i]);
+                printf("\n");
+            }
+        }
+
+        else if (choice == 5) {  // Exit
+            free(arr);
+            printf("Exiting...\n");
+            break;
+        }
+
+        else {
+            printf("Invalid choice!\n");
+        }
     }
+
+    return 0;
 }
