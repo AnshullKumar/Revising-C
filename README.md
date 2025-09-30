@@ -24,7 +24,7 @@ It serves as a quick reference for students, interview preparation, and anyone l
 ### 🔹 Queues  
 - Linear Queue  ✔️
 - Circular Queue  ✔️
-- Deque    
+- Deque
 
 ### 🔹 Trees  
 - Binary Tree (Traversals: Preorder, Inorder, Postorder)  
