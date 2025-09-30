@@ -54,3 +54,16 @@ void peek() {
     }
 }
 
+void display() {
+    if (isEmpty()) {
+        printf("\nQueue is empty.\n");
+    } else {
+        printf("\nQueue elements (front to rear):\n");
+        printf("[");
+        for (int i = front; i != (rear + 1) % MAX; i = (i + 1) % MAX) {  // Loop from front, wrapping around, until we've printed the rear element.
+            printf("%d ", queue[i]);
+        }
+        printf("]\n");
+    }
+}
+
