@@ -19,3 +19,16 @@ int isEmpty() {
     return (front == -1);                 
 }
 
+void enqueue(int value) {
+    if (isFull()) {
+        printf("\nQueue Overflow!\n");   
+    } else {
+        if (isEmpty()) {
+            front = 0;                   // Cold Start
+        }
+        rear = (rear + 1) % MAX;         // Warp rear pointer in circular manner
+        queue[rear] = value;
+        printf("%d enqueued into queue.\n", value);
+    }
+}
+
