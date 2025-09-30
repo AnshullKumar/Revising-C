@@ -32,3 +32,25 @@ void enqueue(int value) {
     }
 }
 
+void dequeue() {
+    if (isEmpty()) {
+        printf("\nQueue Underflow!\n"); 
+    } else {
+        printf("%d dequeued from queue.\n", queue[front]);
+        if (front == rear) {
+            // Reset to empty when last element is removed
+            front = rear = -1;
+        } else {
+            front = (front + 1) % MAX;   // Warp front pointer in circular manner
+        }
+    }
+}
+
+void peek() {
+    if (isEmpty()) {
+        printf("\nQueue is empty.\n");
+    } else {
+        printf("\nFront element is: %d\n", queue[front]);
+    }
+}
+
