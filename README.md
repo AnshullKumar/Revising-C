@@ -13,7 +13,7 @@ It serves as a quick reference for students, interview preparation, and anyone l
 - Sorting (Bubble ✔️, Insertion, Selection, Quick, Merge)  
 
 ### 🔹 Linked Lists  
-- Singly Linked List  
+- Singly Linked List  ✔️
 - Doubly Linked List  
 - Circular Linked List  
 
