@@ -96,6 +96,29 @@ void deleteAtEnd() {
     temp->next = NULL;
 }
 
+void deleteAtPosition(int pos) {
+    if (head == NULL) {
+        printf("List is empty!\n");
+        return;
+    }
+    if (pos == 1) {
+        deleteAtBeginning();
+        return;
+    }
+    struct Node* temp = head;
+    for (int i = 1; temp != NULL && i < pos - 1; i++)
+        temp = temp->next;
+
+    if (temp == NULL || temp->next == NULL) {
+        printf("Invalid position!\n");
+        return;
+    }
+    struct Node* del = temp->next;
+    temp->next = del->next;
+    printf("%d deleted from position %d.\n", del->data, pos);
+    free(del);
+}
+
 void countNodes() {
     int count = 0;
     struct Node* temp = head;
