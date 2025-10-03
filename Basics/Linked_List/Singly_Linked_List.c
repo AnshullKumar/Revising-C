@@ -66,6 +66,16 @@ void insertAtPosition(int value, int pos) {
     }
 }
 
+void deleteAtBeginning() {
+    if (head == NULL) {
+        printf("List is empty!\n");
+        return;
+    }
+    struct Node* temp = head;
+    head = head->next;
+    printf("%d deleted from beginning.\n", temp->data);
+    free(temp);
+}
 
 void countNodes() {
     int count = 0;
