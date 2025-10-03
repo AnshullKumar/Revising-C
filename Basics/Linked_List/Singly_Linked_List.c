@@ -19,6 +19,9 @@ struct Node {
 
 struct Node* head = NULL;   // global head pointer
 
+// Adding functions later
+
+
 int main() {
     int choice, value, pos;
 
