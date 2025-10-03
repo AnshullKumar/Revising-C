@@ -67,6 +67,30 @@ void insertAtPosition(int value, int pos) {
 }
 
 
+void countNodes() {
+    int count = 0;
+    struct Node* temp = head;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    printf("Total nodes: %d\n", count);
+}
+
+void display() {
+    if (head == NULL) {
+        printf("List is empty!\n");
+        return;
+    }
+    printf("Linked List: ");
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
 int main() {
     int choice, value, pos;
 
