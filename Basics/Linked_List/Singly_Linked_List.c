@@ -53,9 +53,10 @@ void insertAtPosition(int value, int pos) {
     newNode->data = value;
 
     struct Node* temp = head;
-    for (int i = 1; temp != NULL && i < pos - 1; i++)
+    for (int i = 1; temp != NULL && i < pos - 1; i++){
         temp = temp->next;
-
+    }
+    
     if (temp == NULL) {
         printf("Invalid position!\n");
         free(newNode);
