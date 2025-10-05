@@ -14,7 +14,7 @@ It serves as a quick reference for students, interview preparation, and anyone l
 
 ### 🔹 Linked Lists  
 - Singly Linked List  ✔️
-- Doubly Linked List  
+- Doubly Linked List  ✔️
 - Circular Linked List  
 
 ### 🔹 Stacks  
