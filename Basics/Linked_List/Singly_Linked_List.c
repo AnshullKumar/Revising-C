@@ -154,7 +154,7 @@ int main() {
         printf("3. Insert at Position\n");
         printf("4. Delete at Beginning\n");
         printf("5. Delete at End\n");
-        printf("6. Delete at Position\n");
+        printf("6. Delete at Position\n"); 
         printf("7. Count Nodes\n");
         printf("8. Display List\n");
         printf("9. Exit\n");
