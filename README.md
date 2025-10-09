@@ -33,6 +33,9 @@ It serves as a quick reference for students, interview preparation, and anyone l
 
 ---
 
+### 🔹Graphs
+-
+-
 ## 🎯 Purpose
 
 - Provide clean and simple C implementations of core data structures.
