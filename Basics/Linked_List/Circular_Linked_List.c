@@ -9,3 +9,6 @@
 // • Uses a menu loop so the user can repeatedly choose operations.
 // • Automatically connects the last node back to the head to maintain circularity.
 // • Handles empty list and invalid position cases safely.
+
+#include <stdio.h>
+#include <stdlib.h>
