@@ -7,7 +7,6 @@
 //  - Display (forward and reverse).
 // • Uses a menu loop so the user can repeatedly choose operations.
 // • Handles empty list cases and memory management.
-// Doubly Linked List Implementation in C
 
 #include <stdio.h>
 #include <stdlib.h>
