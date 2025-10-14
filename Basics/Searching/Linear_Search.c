@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 int main() {
+    
     int n, key, i, found = 0;
 
     printf("Enter number of elements: ");
