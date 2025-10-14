@@ -1,11 +1,15 @@
 // Simple Linear Search Program
-// ----------------------------
-// • Searches for an element in an array with Time Complexity O(n).
+// ------------------------------
+// • Demonstrates the concept of Linear Search using arrays.
+// • Linear Search sequentially checks each element in the array until the desired key (target value) is found or the end is reached.   
+// • Works on both sorted and unsorted arrays.
+// • Time Complexity: O(n)
+//   Space Complexity: O(1)
 
 #include <stdio.h>
 
 int main() {
-    
+
     int n, key, i, found = 0;
 
     printf("Enter number of elements: ");
