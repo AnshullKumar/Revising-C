@@ -19,7 +19,7 @@ struct Node {
 
 };
 
-struct Node *head = NULL;  
+struct Node *head = NULL;  // global head pointer
 
 void insertAtBeginning(int data) {
     struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
