@@ -1,43 +1,29 @@
-# Revising C  
+# Revising-C
 
-A repository focused on **Data Structures implemented in C**.  
-It serves as a quick reference for students, interview preparation, and anyone looking to strengthen their foundations in data structures.  
+This repository is a personal collection of C programs and small projects used for practice and revision.
 
----
+Contents (as of 2025-11-23):
 
-## 📌 Topics Covered  
+- .gitignore
+- .vscode/ (editor settings)
+- Data Structures/ (C implementations of common data structures)
+- Projects/ (small C projects and exercises)
+- README.md (this file)
 
-### 🔹 Arrays  
-- Insertion & Deletion  ✔️
-- Searching (Linear, Binary) ✔️  
-- Sorting (Bubble ✔️, Insertion, Selection, Quick, Merge)  
+How to use
 
-### 🔹 Linked Lists  
-- Singly Linked List  ✔️
-- Doubly Linked List  ✔️
-- Circular Linked List  
+1. Browse the folders above to find programs and exercises.
+2. Compile C files using a C compiler (example: `gcc file.c -o file`).
+3. Run the compiled program (example: `./file`).
 
-### 🔹 Stacks  
-- Stack using Arrays ✔️  
-- Stack using Linked List  
+Contributing
 
-### 🔹 Queues  
-- Linear Queue  ✔️
-- Circular Queue  ✔️
-- Deque
+If you'd like to suggest improvements or add examples, open an issue or submit a pull request.
 
-### 🔹 Trees  
-- Binary Tree (Traversals: Preorder, Inorder, Postorder)  
-- Binary Search Tree (Insertion, Deletion, Searching)  
-- AVL Tree (Basics)  
+License
 
----
+This repository does not currently include a license file. Add one if you want to make the code reusable by others.
 
-### 🔹Graphs
--
--
-## 🎯 Purpose
+Contact
 
-- Provide clean and simple C implementations of core data structures.
-- Act as a revision guide for quick learning and practice.
-- Helpful for college exams, interviews, and coding foundations.
+Maintained by @AnshullKumar.
