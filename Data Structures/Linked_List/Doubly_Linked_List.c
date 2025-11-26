@@ -49,3 +49,30 @@ void insertAtEnd(int data) {
     newNode->prev = temp;
     printf("%d inserted at end.\n", data);
 }
+
+void insertAtPosition(int data, int pos) {
+    if (pos == 1) {
+        insertAtBeginning(data);
+        return;
+    }
+    struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+
+    struct Node *temp = head;
+    for (int i = 1; temp != NULL && i < pos - 1; i++) {
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Invalid position!\n");
+        free(newNode);
+        return;
+    }
+    newNode->next = temp->next;
+    newNode->prev = temp;
+    if (temp->next != NULL) {
+        temp->next->prev = newNode;
+    }
+    temp->next = newNode;
+    printf("%d inserted at position %d.\n", data, pos);
+}
