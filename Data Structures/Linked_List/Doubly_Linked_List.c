@@ -76,3 +76,17 @@ void insertAtPosition(int data, int pos) {
     temp->next = newNode;
     printf("%d inserted at position %d.\n", data, pos);
 }
+
+void deleteBeginning() {
+    if (head == NULL) {
+        printf("List is empty. Cannot delete.\n");
+        return;
+    }
+    struct Node *temp = head;
+    head = head->next;
+    if (head != NULL) {
+        head->prev = NULL;
+    }
+    printf("%d deleted from beginning.\n", temp->data);
+    free(temp);
+}
