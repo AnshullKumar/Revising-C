@@ -90,3 +90,19 @@ void deleteBeginning() {
     printf("%d deleted from beginning.\n", temp->data);
     free(temp);
 }
+
+void delete_End(){
+    if (head == NULL) {
+        printf("List is empty. Cannot delete.\n");
+        return;
+    }
+    struct Node *temp = head;
+    
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    
+    struct Node *del = temp;
+    //"~~~~~~~~"
+
+}
