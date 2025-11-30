@@ -106,3 +106,34 @@ void delete_End(){
     //"~~~~~~~~"
 
 }
+
+void delete_Position(int pos){
+    if (head == NULL) {
+        printf("List is empty. Cannot delete.\n");
+        return;
+    }
+    
+    struct Node *temp = head;
+    
+    for (int i = 1; temp != NULL && i < pos; i++) {
+        temp = temp->next;
+    }
+    
+    if (temp == NULL) {
+        printf("Invalid position!\n");
+        return;
+    }
+    
+    if (temp->prev != NULL) {
+        temp->prev->next = temp->next;
+    } else {
+        head = temp->next;
+    }
+    
+    if (temp->next != NULL) {
+        temp->next->prev = temp->prev;
+    }
+    
+    printf("%d deleted from position %d.\n", temp->data, pos);
+    free(temp);
+}
