@@ -5,6 +5,7 @@
 // Values {12, 22, 32, 42, 52} all hash to index 2, forming a chain.
 // New nodes are inserted at the head of each bucket’s list.
 // Prints the final contents of all hash table buckets.
+
 #include <stdio.h>
 #include <stdlib.h>
 
