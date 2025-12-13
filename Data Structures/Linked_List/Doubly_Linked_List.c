@@ -51,10 +51,16 @@ void insertAtEnd(int data) {
 }
 
 void insertAtPosition(int data, int pos) {
+    if (head == NULL && pos != 1) {
+    printf("Invalid position!\n");
+    return;
+    }
+
     if (pos == 1) {
         insertAtBeginning(data);
         return;
     }
+
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
 
@@ -96,15 +102,20 @@ void delete_End(){
         printf("List is empty. Cannot delete.\n");
         return;
     }
-    struct Node *temp = head;
-    
+    if(head->next == NULL){
+        printf("%d deleted from end.\n", head->data);
+        free(head);
+        head = NULL;
+        return;
+    }
+    struct Node *temp = head; 
     while (temp->next != NULL) {
         temp = temp->next;
     }
-    
-    struct Node *del = temp;
-    //"~~~~~~~~"
-
+       
+    printf("%d deleted from end.\n", temp->data);
+    temp->prev->next = NULL;
+    free(temp);
 }
 
 void delete_Position(int pos){
