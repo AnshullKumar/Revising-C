@@ -60,7 +60,7 @@ void insertAtPosition(int data, int pos) {
         insertAtBeginning(data);
         return;
     }
-
+ 
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
 
