@@ -3,8 +3,9 @@
 // • Implements a doubly linked list using dynamic memory allocation.
 // • Provides basic operations:
 //  - Insert (at beginning, end, at any position),
-//  - Delete (by value),
-//  - Display (forward and reverse).
+//  - Delete (at beginning, end, at any position),
+//  - Display (displays the linked list),
+//  - Count (Counts the no. of nodes present).
 // • Uses a menu loop so the user can repeatedly choose operations.
 // • Handles empty list cases and memory management.
 
@@ -147,4 +148,89 @@ void delete_Position(int pos){
     
     printf("%d deleted from position %d.\n", temp->data, pos);
     free(temp);
+}
+
+void display(){
+    if (head == NULL) {
+        printf("List is empty.\n");
+        return;
+    }
+    struct Node *temp = head;
+    printf("Displaying the Linked List... ");
+    while (temp != NULL) {
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+void count(){
+    int count = 0;
+    struct Node *temp = head;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+    printf("Number of nodes in the linked list: %d\n", count);
+}
+
+int main(){
+    int choice, data, pos;
+    while (1) {
+        printf("\n\n------Doubly Linked List Operations Menu------\n");
+        printf("1. Insert at Beginning\n");
+        printf("2. Insert at End\n");
+        printf("3. Insert at Position\n");
+        printf("4. Delete from Beginning\n");
+        printf("5. Delete from End\n");
+        printf("6. Delete from Position\n");
+        printf("7. Display List\n");
+        printf("8. Count Nodes\n");
+        printf("9. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        switch (choice) {
+            case 1:
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertAtBeginning(data);
+                break;
+            case 2:
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                insertAtEnd(data);
+                break;
+            case 3:
+                printf("Enter data to insert: ");
+                scanf("%d", &data);
+                printf("Enter position to insert at: ");
+                scanf("%d", &pos);
+                insertAtPosition(data, pos);
+                break;
+            case 4:
+                deleteBeginning();
+                break;
+            case 5:
+                delete_End();
+                break;
+            case 6:
+                printf("Enter position to delete from: ");
+                scanf("%d", &pos);
+                delete_Position(pos);
+                break;
+            case 7:
+                display();
+                break;
+            case 8:
+                count();
+                break;
+            case 9:
+                printf("Exiting program.\n");
+                exit(0);
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+    return 0;
 }
