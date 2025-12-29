@@ -1,6 +1,6 @@
 # Revising-C
 
-This repository is a personal collection of C programs used for practice and revision.
+This repository is a personal collection of C programs used for practice and revision. 
 
 Contents (as of 2025-11-23):
 
